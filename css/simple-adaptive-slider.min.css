@@ -6,6 +6,7 @@
   margin-left: auto;
   margin-right: auto;
 }
+
 .slider__wrapper {
   position: relative;
   overflow: hidden;
@@ -92,4 +93,45 @@
 }
 .slider__indicator_active {
   background-color: #fff;
+}
+
+@media (max-width: 680px) {
+  .slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 500px;
+    max-height: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 550px) {
+  .slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 400px;
+    max-height: 380px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 450px) {
+  .slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 300px;
+    max-height: 288px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+@media (max-width: 350px) {
+  .slider {
+    position: relative;
+    overflow: hidden;
+    max-width: 250px;
+    max-height: 240px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

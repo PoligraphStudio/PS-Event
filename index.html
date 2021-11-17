@@ -11,29 +11,65 @@
     />
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/header.css" />
     <link rel="stylesheet" href="./css/simple-adaptive-slider.min.css" />
     <script defer src="./js/simple-adaptive-slider.min.js"></script>
     <script defer src="./js/slider.js"></script>
+    <script defer src="./js/header.js"></script>
   </head>
   <body>
-    <header class="header container" id="home">
-      <a href="#" class="logo"
-        ><img
-          src="./img/logo.png"
-          alt="PolygraphStudio & Design LOGO"
-          class="logo-img"
-      /></a>
-      <ul class="nav-menu">
-        <li class="active menu-punkt"><a href="#home">Главная</a></li>
-        <li class="menu-punkt"><a href="#services">Услуги</a></li>
-        <li class="menu-punkt"><a href="#places">Места проведения</a></li>
-        <li class="menu-punkt"><a href="#portfolio">Портфолио</a></li>
-        <li class="menu-punkt"><a href="#about">О нас</a></li>
-        <li class="menu-punkt"><a href="#contact">Контакты</a></li>
-      </ul>
+    <header class="container header">
+      <div class="header__container">
+        <a href="#" class="header__logo"
+          ><img
+            src="./img/logo.png"
+            alt="PolygraphStudio & Design LOGO"
+            class="logo-img"
+        /></a>
+        <div class="header__menu menu">
+          <div class="menu__icon">
+            <span></span>
+          </div>
+          <!-- /.menu__icon -->
+          <nav class="menu__body">
+            <ul class="menu__list">
+              <li>
+                <a data-goto=".conferences" href="#" class="menu__link"
+                  >Главная</a
+                >
+              </li>
+              <li>
+                <a data-goto=".contents_with_phone" href="#" class="menu__link"
+                  >Услуги</a
+                >
+              </li>
+              <li>
+                <a data-goto=".places" href="#" class="menu__link"
+                  >Места проведения</a
+                >
+              </li>
+              <li>
+                <a data-goto=".portfolio" href="#" class="menu__link"
+                  >Портфолио</a
+                >
+              </li>
+              <li>
+                <a data-goto=".about" href="#" class="menu__link">О нас</a>
+              </li>
+              <li>
+                <a data-goto=".footer" href="#" class="menu__link">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <!-- /.menu__body -->
+        </div>
+        <!-- /.header__menu menu -->
+      </div>
+      <!-- /.header__container -->
     </header>
     <main class="main">
-      <div class="container conferences" id="home">
+      <div class="btn-up"><a href="#home" class="btn-up-1">&#8593</a></div>
+      <section class="container conferences" id="home">
         <div class="conferences_content">
           <h1 class="conferences_title">Конференции & семинары</h1>
           <p class="conferences_info">
@@ -42,7 +78,7 @@
           </p>
         </div>
         <!-- /.conferences_content -->
-      </div>
+      </section>
       <!-- /.conferences -->
       <section class="contents_with_phone container" id="services">
         <div class="organization">
@@ -132,7 +168,7 @@
       <section class="places container" id="places">
         <div class="places_contents">
           <h1 class="places_title">Места проведения мероприятий</h1>
-          <div class="place-info">
+          <div class="place-info" id="place-info-1">
             <img src="./img/places-1.png" alt="" class="place-img" />
             <div class="place-with-icon" id="place-p-1">
               <img src="./img/icon-place.svg" alt="" class="place-icon" />
@@ -153,7 +189,7 @@
             <img src="./img/places-2.png" alt="" class="place-img" />
           </div>
           <!-- /.place-info -->
-          <div class="place-info">
+          <div class="place-info" id="place-info-3">
             <img src="./img/places-3.png" alt="" class="place-img" />
             <div class="place-with-icon" id="place-p-3">
               <img src="./img/icon-place.svg" alt="" class="place-icon" />
@@ -219,6 +255,7 @@
               <div class="slider__items">
                 <div class="slider__item">
                   <img
+                    width="100%"
                     src="./img/slider-1.png"
                     alt="slider-1"
                     class="slider-img"
@@ -226,6 +263,7 @@
                 </div>
                 <div class="slider__item">
                   <img
+                    width="100%"
                     src="./img/slider-2.png"
                     alt="slider-2"
                     class="slider-img"
@@ -233,6 +271,7 @@
                 </div>
                 <div class="slider__item">
                   <img
+                    width="100%"
                     src="./img/slider-3.png"
                     alt="slider-3"
                     class="slider-img"
@@ -240,6 +279,7 @@
                 </div>
                 <div class="slider__item">
                   <img
+                    width="100%"
                     src="./img/slider-4.png"
                     alt="slider-4"
                     class="slider-img"
@@ -300,8 +340,8 @@
             <img src="./img/logo.png" alt="logo" class="logo-footer"
           /></a>
           <div class="lang">
-            <a href="/">RU</a>
-            <a href="/">EN</a>
+            <a href="./index.html">RU</a>
+            <a href="./eng/index_eng.html">EN</a>
           </div>
           <p class="footer-p">ООО "ПолиграфСтудия и Дизайн"</p>
         </div>

@@ -7,49 +7,41 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
-
+/* для меню хедера */
+body._lock {
+  overflow: hidden;
+}
+/* для меню хедера */
 .container {
   max-width: 1140px;
   position: relative;
   margin: 0 auto;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding: 0 25px;
   box-shadow: 0 0 60px rgb(255, 255, 255);
 }
 
-.header {
-  background-color: rgba(0, 0, 0, 0.945);
+.btn-up {
   position: fixed;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 2;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(54, 54, 54, 0.945);
+  right: 25px;
+  bottom: 25px;
+  font-size: 24px;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  z-index: 8;
 }
-
-.nav-menu {
-  position: absolute;
-  top: 0;
-  right: -15px;
-  display: flex;
-  justify-content: space-between;
+.btn-up:hover {
+  box-shadow: 0 0 10px #fff;
 }
-
-.menu-punkt {
-  list-style-type: none;
-  margin-right: 30px;
-}
-
-.menu-punkt a {
-  color: #dcdbda;
-  font-size: 16px;
-  font-weight: normal;
-}
-
-.menu-punkt a:hover {
+.btn-up-1 {
   color: #fff;
-  text-shadow: 0 0 20px #fff;
+  display: block;
+  padding-top: 10px;
 }
-
 .conferences {
   min-height: 600px;
   background-image: url('../img/conferences-img.png');
@@ -406,7 +398,17 @@ body {
   min-height: 250px;
   background: rgba(0, 0, 0, 0.856);
 }
-
+.footer {
+  position: relative;
+}
+.footer_content-1 {
+  position: absolute;
+  left: 25px;
+}
+.footer_content-3 {
+  position: absolute;
+  right: 25px;
+}
 .footer_content {
   /* display: grid;
   grid-template-columns: 1fr, 2fr, 1fr; */
@@ -414,11 +416,6 @@ body {
   justify-content: center;
   padding-top: 27px;
   padding-bottom: 27px;
-}
-
-.footer_content-1 {
-  position: relative;
-  max-width: 240px;
 }
 
 .footer_content-2 {
@@ -453,13 +450,9 @@ body {
   margin-bottom: 0;
 }
 
-.footer_content-3 {
-  position: relative;
-  max-width: 320px;
-}
-
 .social-link {
   color: #dcdbda;
+  font-size: 16px;
   display: flex;
   align-items: center;
   margin-bottom: 5px;
@@ -475,11 +468,12 @@ body {
 }
 
 .social-link-1 {
-  padding-left: 37px;
+  padding-left: 34px;
 }
 
 .social-img {
   margin-right: 5px;
+  width: 28px;
 }
 
 .footer-h3 {
@@ -500,6 +494,7 @@ body {
   line-height: 24px;
   margin: 0;
   margin-bottom: 10px;
+  max-width: 200px;
 }
 
 .footer-p-phone-1 {
@@ -535,12 +530,23 @@ body {
   .container {
     max-width: 850px;
   }
-
+  .social-link {
+    font-size: 14px;
+  }
+  .conferences_title {
+    font-size: 60px;
+  }
   .contents_with_phone {
     background-position-y: 200px;
   }
   .organization_contents {
     margin-left: 230px;
+  }
+  .place-p {
+    font-size: 16px;
+  }
+  .place-img {
+    width: 60%;
   }
   .exp_contents {
     max-width: 490px;
@@ -552,29 +558,589 @@ body {
     max-width: 100%;
   }
   .contents_with_phone {
-    background-position-y: 110px;
-  }
-  .organization_contents {
-    margin-left: 0;
-  }
-}
-
-@media (max-width: 917px) {
-  .contents_with_phone {
     background-position-y: 170px;
   }
 }
 
-@media (max-width: 867px) {
+@media (max-width: 897px) {
   .contents_with_phone {
+    background-position-y: 210px;
   }
 }
 
-@media (max-width: 770px) {
-  .container {
-    max-width: 100%;
+@media (max-width: 825px) {
+  .organization_contents {
+    margin-left: 200px;
   }
-  .nav-menu {
-    right: 15px;
+  .contents_with_phone {
+    background-position-y: 220px;
+  }
+  .portfolio-title {
+    margin-bottom: 50px;
+  }
+}
+
+@media (max-width: 795px) {
+  .conferences_title {
+    font-size: 55px;
+  }
+  .contents_with_phone {
+    min-height: 1200px;
+    background-image: url('../img/backgroundPhone_795.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: 12px;
+    background-color: rgba(255, 255, 255, 0.575);
+    z-index: 1;
+  }
+  .exp_contents {
+    max-width: 380px;
+  }
+  .exp_contents b {
+    font-size: 18px;
+  }
+}
+@media (max-width: 750px) {
+  .conferences_title {
+    font-size: 50px;
+  }
+  .conferences_info {
+    width: 560px;
+  }
+  .contents_with_phone {
+    min-height: 1200px;
+    background-image: url('../img/backgroundPhone_750.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: 12px;
+    background-color: rgba(255, 255, 255, 0.575);
+    z-index: 1;
+  }
+  .about {
+    min-height: 450px;
+  }
+  .company_title {
+    margin-bottom: 60px;
+  }
+  .social-link,
+  .footer-p-adress,
+  .footer-p-phone,
+  .footer-p-phone-1 {
+    font-size: 12px;
+  }
+  .social-link-1,
+  .footer-p-phone-1 {
+    padding-left: 31px;
+  }
+  .social-img {
+    width: 26px;
+  }
+  .footer-p-adress {
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 730px) {
+  .places_title {
+    margin-bottom: 90px;
+  }
+  .portfolio {
+    min-height: 800px;
+  }
+  .portfolio-title {
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 699px) {
+  .conferences {
+    min-height: 500px;
+    background-image: url('../img/conferences-img.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+  }
+  .conferences_title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 680px) {
+  .contents_with_phone {
+    min-height: 1200px;
+    background-image: url('../img/backgroundPhone_750.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: 60px;
+    background-color: rgba(255, 255, 255, 0.575);
+    z-index: 1;
+  }
+  .places_contents {
+    min-height: 2700px;
+  }
+  .place-info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+  }
+  .places {
+    min-height: 1500px;
+    background-image: url('../img/background.png');
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+  }
+  .place-img {
+    width: 100%;
+    padding-top: 20px;
+    margin-bottom: 40px;
+  }
+  .place-p {
+    color: #fff;
+    font-size: 20px;
+    margin: 0;
+    line-height: 30px;
+    font-style: italic;
+  }
+  #place-p-1,
+  #place-p-3,
+  #place-info-4,
+  #place-info-2 {
+    margin: 0;
+  }
+  #place-info-1,
+  #place-info-3 {
+    flex-direction: column-reverse;
+  }
+  /*
+  #place-p-3 {
+    margin-top: -300px;
+  }
+  
+  #place-info-4 {
+    margin-top: -100px;
+  }
+  
+  #place-info-2 {
+    margin-top: -70px;
+  } */
+
+  .place-p-end {
+    color: #fff;
+    font-size: 24px;
+    margin: 0;
+    line-height: 30px;
+    font-style: normal;
+    margin: 40px auto 80px auto;
+    text-align: center;
+    max-width: 800px;
+  }
+
+  .place-icon {
+    margin-right: 10px;
+  }
+
+  .place-with-icon {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .places_title {
+    color: #fff;
+    font-weight: bold;
+    font-size: 36px;
+    margin-top: 60px;
+    margin-bottom: 70px;
+  }
+}
+
+@media (max-width: 680px) {
+  .conferences_title {
+    font-size: 43px;
+  }
+  .conferences_info {
+    width: 450px;
+  }
+  .footer {
+    min-height: 300px;
+  }
+  .footer-p-adress {
+    max-width: 125px;
+  }
+  .footer-p {
+    margin-top: 80px;
+  }
+}
+@media (max-width: 650px) {
+  .contents_with_phone {
+    min-height: 1100px;
+    background-color: rgba(255, 255, 255, 0.575);
+    background-image: url('../img/backgroundPhone_650.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-y: 0px;
+    z-index: 1;
+  }
+  .contents_with_phone:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(240, 240, 240, 0.61);
+  }
+  .organization_contents {
+    z-index: 5;
+  }
+  .exp_contents {
+    z-index: 5;
+  }
+  .organization_title {
+    text-align: center;
+  }
+  .organization_contents {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .org-p {
+    text-shadow: 0 0 28px #000;
+  }
+  .places_contents {
+    min-height: 2570px;
+  }
+  .portfolio {
+    min-height: 725px;
+  }
+}
+@media (max-width: 608px) {
+  .places_title {
+    font-size: 30px;
+  }
+  .places_contents {
+    min-height: 2400px;
+  }
+}
+@media (max-width: 590px) {
+  .conferences_title {
+    font-size: 35px;
+  }
+  .conferences_info {
+    font-size: 14px;
+    width: 400px;
+  }
+  .contents_with_phone {
+    background-position-y: 50px;
+  }
+  .places_contents {
+    min-height: 2300px;
+  }
+  .portfolio-title {
+    margin-bottom: 110px;
+  }
+  .portfolio {
+    min-height: 680px;
+  }
+  .logo-footer {
+    width: 90%;
+  }
+}
+@media (max-width: 550px) {
+  .footer {
+    min-height: 245px;
+  }
+  .logo-footer {
+    width: 80%;
+  }
+  .footer-p {
+    margin-top: 50px;
+  }
+  .social-link,
+  .footer-p-adress,
+  .footer-p-phone-1,
+  .footer-p-phone {
+    font-size: 10px;
+  }
+  .social-img {
+    width: 22px;
+  }
+}
+@media (max-width: 514px) {
+  .places_title {
+    font-size: 26px;
+  }
+  .place-p {
+    font-size: 16px;
+  }
+  .footer {
+    min-height: 500px;
+  }
+  .footer_content {
+    display: block;
+  }
+  .footer_content-1,
+  .footer_content-3 {
+    bottom: 20px;
+  }
+  .social-link,
+  .footer-p-adress,
+  .footer-p-phone-1,
+  .footer-p-phone {
+    font-size: 14px;
+  }
+  .footer-p {
+    margin-top: 30px;
+  }
+  .social-img {
+    width: 26px;
+  }
+  .logo-footer {
+    width: 60%;
+  }
+}
+@media (max-width: 490px) {
+  .conferences_title {
+    font-size: 30px;
+  }
+  .conferences_info {
+    font-size: 14px;
+    width: 350px;
+  }
+  .contents_with_phone {
+    min-height: 1050px;
+    background-color: rgba(255, 255, 255, 0.575);
+    background-image: url('../img/backgroundPhone_490.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+  }
+  .places_contents {
+    min-height: 2170px;
+  }
+  .place-p-end {
+    font-size: 20px;
+  }
+  .places_title {
+    font-size: 22px;
+  }
+  .portfolio {
+    min-height: 610px;
+  }
+  .experience {
+    margin-top: 50px;
+  }
+  .about_text {
+    font-size: 14px;
+  }
+}
+@media (max-width: 431px) {
+  .organization_title {
+    font-size: 30px;
+  }
+  .places_contents {
+    min-height: 2100px;
+  }
+  .place-p {
+    font-size: 14px;
+  }
+  .portfolio {
+    min-height: 550px;
+  }
+}
+
+@media (max-width: 425px) {
+  .conferences_title {
+    font-size: 26px;
+  }
+  .conferences_info {
+    font-size: 14px;
+    width: 300px;
+  }
+  .contents_with_phone {
+    min-height: 1100px;
+    background-color: rgba(255, 255, 255, 0.575);
+    background-image: url('../img/backgroundPhone_490.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+  }
+}
+@media (max-width: 409px) {
+  .organization_title_info {
+    font-size: 20px;
+    text-shadow: 0 0 25px #000;
+  }
+  .org-p {
+    font-size: 14px;
+  }
+  .places_contents {
+    min-height: 2000px;
+  }
+  .place-p-end {
+    font-size: 18px;
+  }
+  .places_title {
+    font-size: 32px;
+    line-height: 40px;
+  }
+  .experience {
+    margin-top: 70px;
+  }
+  .contents_with_phone {
+    min-height: 1050px;
+  }
+  .portfolio {
+    min-height: 500px;
+  }
+  .portfolio-title,
+  .about_title,
+  .company_title {
+    font-size: 32px;
+  }
+  .footer {
+    min-height: 550px;
+  }
+  /* .footer_content {
+    display: block;
+  }
+  .footer_content-1,
+  .footer_content-3 {
+    bottom: 20px;
+  } */
+  .social-link,
+  .footer-p-adress,
+  .footer-p-phone-1,
+  .footer-p-phone {
+    font-size: 12px;
+  }
+  /* .footer-p {
+    margin-top: 30px;
+  } */
+  .social-img {
+    width: 22px;
+  }
+  .logo-footer {
+    width: 80%;
+  }
+}
+@media (max-width: 375px) {
+  .conferences_title {
+    font-size: 24px;
+  }
+  .conferences_info {
+    font-size: 14px;
+    width: 300px;
+  }
+  .organization_title {
+    font-size: 26px;
+  }
+
+  .places_contents {
+    min-height: 1900px;
+  }
+  .experience_info b {
+    font-size: 18px;
+  }
+  .portfolio {
+    min-height: 470px;
+  }
+}
+@media (max-width: 349px) {
+  .organization_title_info {
+    font-size: 18px;
+  }
+
+  .places_contents {
+    min-height: 1850px;
+  }
+  .place-p-end {
+    font-size: 16px;
+  }
+  .experience {
+    margin-top: 70px;
+  }
+  .contents_with_phone {
+    min-height: 1100px;
+  }
+  .about_text {
+    font-size: 12px;
+  }
+  .company_title {
+    font-size: 26px;
+  }
+  .with_company {
+    min-height: 440px;
+  }
+  .footer {
+    min-height: 650px;
+  }
+  .footer_content {
+    display: block;
+  }
+  .footer_content-1 {
+    bottom: 150px;
+  }
+  .footer_content-3 {
+    bottom: 20px;
+    left: 25px;
+  }
+  .social-link,
+  .footer-p-adress,
+  .footer-p-phone-1,
+  .footer-p-phone {
+    font-size: 14px;
+  }
+  .footer-p {
+    margin-top: 30px;
+  }
+  .social-img {
+    width: 22px;
+  }
+  .logo-footer {
+    width: 80%;
+  }
+}
+@media (max-width: 325px) {
+  .conferences_title {
+    font-size: 22px;
+  }
+  .conferences_info {
+    font-size: 14px;
+    width: 275px;
+  }
+  .organization_title {
+    font-size: 22px;
+  }
+  .contents_with_phone {
+    min-height: 1100px;
+  }
+  .places_contents {
+    min-height: 1800px;
+  }
+  .portfolio {
+    min-height: 420px;
+  }
+}
+@media (max-width: 301px) {
+  .organization_title_info,
+  .experience_info b {
+    font-size: 16px;
+  }
+  .places_contents {
+    min-height: 1700px;
+  }
+  .place-p-end {
+    font-size: 14px;
+  }
+  .company_title {
+    font-size: 24px;
   }
 }
